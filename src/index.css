@@ -1,0 +1,12 @@
+.App {
+  font-family: sans-serif;
+}
+
+.post {
+  display: flex;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 0 0 10px 0;
+  padding: 10px;
+}

@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-## People Name Search Text App
+## React Js with API
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

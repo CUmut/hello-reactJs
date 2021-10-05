@@ -1,0 +1,25 @@
+.container {
+  border: 0.5px solid black;
+  margin-top: 10px;
+  color: black;
+  border-color: slategray;
+  opacity: 1;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+.inner_container {
+  font-size: 18;
+  font-family: "Courier New", Courier, monospace;
+}
+.button {
+  border-radius: 10;
+  display: flex;
+  justify-content: flex-end;
+}
+.detail {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5c6bc0;
+  text-decoration: none;
+}

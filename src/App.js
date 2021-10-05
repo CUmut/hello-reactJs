@@ -1,21 +1,35 @@
 import React, { useState } from "react";
-import Form from './Form'
-import SearchForm from "./SearchForm";
-
+import User from "./page/User/User";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import UserDetail from "./page/UserDetail/UserDetail";
+import Home from "./components/Home";
+import styles from "./style/styles.module.css";
 
 const App = () => {
-  
-  const [search,setSearch] = useState("");
+  const [search, setSearch] = useState("");
 
-  const handleChange = event => setSearch(event.target.value);
+  const handleChange = (event) => setSearch(event.target.value);
 
   return (
-    <div className="App">
-      <h1>Name Search</h1>
-      <SearchForm search={search} onSearchChange={handleChange} />
-      <Form search={search} />
-    </div>
-  )
+    <Router>
+      <div className={styles.active}>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/users">User List</Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className="App">
+        <Route path="/" component={Home} />
+        <Route path="/users" component={User} />
+        <Route path="/user/:id" component={UserDetail} />
+      </div>
+    </Router>
+  );
 };
 
 export default App;
